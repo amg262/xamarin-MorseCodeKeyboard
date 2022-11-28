@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MorseCodeKeyboard.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Morse Code" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+        </Frame>
+        <Label Text="Message"></Label>
+        <Label Text="" FontSize="16" Padding="30,24,30,0" x:Name="outputMorseText"></Label>
+        <Label FontSize="16" Padding="30,24,30,0" x:Name="outputText" Text=""/>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Text="." FontSize="24" Clicked="ButtonClicked" ClassId="dot"/>
+            <Button Grid.Column="1" Text="-" FontSize="24" Clicked="ButtonClicked" ClassId="dash"/>
+            <Button Grid.Row="1" Grid.ColumnSpan="2" Text="Space" Clicked="ButtonClicked" ClassId="space"/>
+        </Grid>
+
+        
+    </StackLayout>
+
+</ContentPage>
